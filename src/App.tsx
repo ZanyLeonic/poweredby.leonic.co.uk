@@ -1,17 +1,34 @@
-import './sass/App.scss'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import Main from './main-content'
 
-function App() {
+import 'materialize-css'
+import 'materialize-css/sass/materialize.scss'
+import 'material-icons/iconfont/material-icons.scss'
 
-  return (
-  <div className="col s12 m8 offset-m2 l6 offset-l3">
-    <div className="card-panel center hoverable">
+import './sass/ext/dark-theme.scss'
+
+import './sass/app.scss'
+
+import Navbar from './navbar'
+import Footer from './footer'
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <header>
+      <Navbar />
+    </header>
+    <main>
+      <div className="container">
         <div className="row">
-            <h1 className="center-align">Coming Soon...</h1>
-            <h5 className="center-align">See you soon!</h5>
+          <Main />
         </div>
-    </div>
-  </div>
-  )
-}
-
-export default App
+      </div>
+    </main>
+    <Footer
+          author=""
+          authorURL=""
+          photo={false}
+        />
+  </React.StrictMode>
+)
