@@ -8,11 +8,16 @@ import 'material-icons/iconfont/material-icons.scss'
 
 import './sass/ext/dark-theme.scss'
 
+import './sass/index.scss'
+
+import Navbar from './navbar'
 import Footer from './footer'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <header></header>
+    <header>
+      <Navbar />
+    </header>
     <main>
       <div className="container">
         <div className="row">
@@ -20,12 +25,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </div>
       </div>
     </main>
-    <footer>
     <Footer
           author=""
           authorURL=""
           photo={false}
         />
-    </footer>
   </React.StrictMode>
 )

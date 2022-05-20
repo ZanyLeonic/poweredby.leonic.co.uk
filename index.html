@@ -33,5 +33,11 @@
 	<body>
 		<div id="root"></div>
 		<script type="module" src="/src/main.tsx"></script>
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function() {
+				var elems = document.querySelectorAll('.sidenav');
+				var instances = M.Sidenav.init(elems, {});
+			});
+		</script>
 	</body>
 </html>
